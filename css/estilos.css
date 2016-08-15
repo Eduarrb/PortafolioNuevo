@@ -1,0 +1,118 @@
+@import "bootstrap.min.css";
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+.header {
+  position: relative;
+}
+.header-contenedor {
+  position: absolute;
+  top: 35%;
+  left: 6.224%;
+}
+.header-contenedor_fila_columna {
+  color: #fff;
+  text-align: center;
+}
+.header-contenedor_fila_columna_titulo {
+  text-transform: uppercase;
+  font-size: 3.5em;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+.header-contenedor_fila_columna_descripcion {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+.header-contenedor_fila_columna_link {
+  display: block;
+  text-decoration: none !important;
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+.header-contenedor_fila_columna_link:hover {
+  color: #125599 !important;
+  background: #fff;
+  transition: 0.5s ease;
+}
+.navbar {
+  background: #125599;
+  border-radius: 0;
+  margin-bottom: 0;
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+}
+.navbar-collapse {
+  background: #125599;
+}
+.navbar .container .navbar-header .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar .container .navbar-header .navbar-brand {
+  display: none;
+}
+.navbar .container .navbar-collapse .nav {
+  text-align: center;
+  float: none;
+}
+.navbar .container .navbar-collapse .nav li {
+  float: none;
+  display: inline-block;
+}
+.navbar .container .navbar-collapse .nav li a {
+  color: #fff;
+  transition: 0.5s;
+}
+.navbar .container .navbar-collapse .nav li a:hover,
+.navbar .container .navbar-collapse .nav li a:focus {
+  background-color: #00478a;
+  transition: 0.5s;
+}
+.fixed {
+  position: fixed;
+  top: 0 !important;
+}
+.wrapper {
+  height: 400px;
+  text-align: center;
+  padding: 150 0 0 0;
+}
+section {
+  padding-top: 52px !important;
+}

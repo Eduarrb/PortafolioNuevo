@@ -1,0 +1,118 @@
+@import "bootstrap.min.css"
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+.header
+    position relative
+    &-contenedor
+        position absolute
+        top 35%
+        left 6.224%
+        &_fila
+            &_columna
+                color white
+                text-align center
+                &_titulo
+                    text-transform uppercase
+                    // font-weight 700
+                    font-size 3.5em
+                    letter-spacing 2px
+                    margin-bottom 25px
+                &_descripcion
+                    font-size 1.5em
+                    letter-spacing 1px
+                &_link
+                    display block
+                    text-decoration none !important
+                    color white !important
+                    text-transform uppercase
+                    font-weight bold
+                    padding 10px
+                    border-radius 10px
+                    border 1px solid white
+                    width 190px
+                    margin-left auto
+                    margin-right auto
+                    margin-top 30px
+                    transition .5s
+                    &:hover
+                        color #125599 !important
+                        background white
+                        transition .5s ease
+
+.navbar
+	background #125599
+	border-radius 0
+	margin-bottom 0
+	// height 51px
+	position absolute
+	left 0
+	z-index 3
+	width 100%
+	&-collapse
+		background #125599
+	.container
+		.navbar-header
+			.navbar-toggle
+				.icon-bar
+					background-color #fff
+			.navbar-brand
+				display none
+		.navbar-collapse
+			.nav
+				text-align center
+				float none
+				li
+					float none
+					display inline-block
+					a
+						color #fff
+						transition 0.5s
+					a:hover,
+					a:focus
+						background-color #00478a
+						transition .5s
+					
+.fixed
+	position fixed
+	top 0 !important
+.wrapper
+	height 400px
+	text-align center
+	padding 150 0 0 0
+section
+	padding-top 52px !important
+				
