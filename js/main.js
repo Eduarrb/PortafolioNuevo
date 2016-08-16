@@ -324,3 +324,8 @@ $(".header-contenedor_fila_columna_link").click(function(e){
    /* some statements */
    e.preventDefault();
 });
+
+/*PopOver*/
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})

@@ -1,4 +1,5 @@
 @import "bootstrap.min.css";
+@import "font-awesome.min.css";
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -108,10 +109,92 @@
   position: fixed;
   top: 0 !important;
 }
-.wrapper {
-  height: 400px;
+.me {
+  background-color: #125599;
+}
+.me .container {
+  padding-top: 51px;
+  padding-bottom: 100px;
+}
+.me .container .row {
+  margin-top: 30px;
   text-align: center;
-  padding: 150 0 0 0;
+}
+.me .container .row .col-md-6 figure {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.me .container .row .col-md-6 figure img {
+  width: 100%;
+  border-radius: 50%;
+}
+.me .container .row .col-md-6 h1 {
+  color: #fff;
+}
+.me .container .row .col-md-6 p {
+  color: #000;
+  font-size: 1.7em;
+  margin-bottom: 40px;
+}
+.me .container .row .col-md-6 a {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  font-weight: bold;
+  color: #fff;
+}
+.me .container .row .col-md-6 a:hover {
+  background-color: #fff;
+  transition: 0.5s;
+  color: #125599;
+  text-decoration: none;
+}
+.about {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.about-contenedor_fila_linea {
+  border-bottom: 1px solid #125599;
+}
+.about-contenedor_fila_titulo,
+.about-contenedor_fila_parrafo {
+  text-align: center;
+}
+.about-contenedor_fila_titulo {
+  color: #125599;
+  font-weight: 500;
+}
+.about-contenedor_fila_iconCont {
+  text-align: center;
+  padding: 0;
+}
+.about-contenedor_fila_iconCont a {
+  display: block;
+  text-decoration: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 50px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.about-contenedor_fila_iconCont a span {
+  display: block;
+  font-size: 25px;
+  margin-top: 20px;
+  font-family: Helvetica;
+  color: #000;
+}
+.about-contenedor_fila_iconCont a:hover {
+  background-color: #125599;
+  transition: 0.5s;
+  color: #fff !important;
+  font-size: 60px;
+}
+.about-contenedor_fila_iconCont a:hover span {
+  color: #fff;
 }
 section {
   padding-top: 52px !important;
