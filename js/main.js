@@ -55,7 +55,7 @@ $(document).ready(function() {
    
   $('#main-nav-list').onePageNav({
     scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-    scrollOffset: 0 //Height of Navigation Bar 
+    scrollOffset: 52 //Height of Navigation Bar 
     /* Correción a 0 para que no aparesca 51px al seleccionar 
        la 2da sección en el ménu */
   });
@@ -316,6 +316,12 @@ $(document).on('click', '.navbar-collapse.in', function (e) {
 $(".header-contenedor_fila_columna_link").click(function() {
     $('html, body').animate({
         scrollTop: $("#section01").offset().top
+    }, 800);
+});
+/* Scroll al header*/
+$(".inicio").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#header").offset().top
     }, 800);
 });
 
