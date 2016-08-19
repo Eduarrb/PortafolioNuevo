@@ -52,6 +52,25 @@ function redimencionar(){
 
 
 $(document).ready(function() {
+	var owl = $("#habilidades-slide");
+	owl.owlCarousel({
+		autoPlay:true,
+		items:4,
+		itemsDesktop:[1000,4],
+		itemsDesktopSmall:[900,3],
+		itemsTablet:[600,2],
+		itemsMobile:[480,1]
+	});
+	/* tamaño del window & cuando la section este en top 0*/
+	var windowH = $(window).height();
+	$(window).bind('resize', function () {
+		windowH = $(window).height();
+	});
+	var habilidadesTopOffset = 0;
+	if($('#section02').length)
+	{
+		habilidadesTopOffset = $('#section02').offset().top;
+	};
    
   $('#main-nav-list').onePageNav({
     scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
@@ -75,6 +94,20 @@ $(document).ready(function() {
       // otherwise remove it
       $('#menu').removeClass('fixed');
     }
+    if(window.pageYOffset > habilidadesTopOffset-windowH+200)
+		{
+			$('.chart').easyPieChart({
+				easing: 'easeInOut',
+				barColor: '#ffffff',
+				trackColor: '#125599',
+				scaleColor: false,
+				lineWidth: 4,
+				size: 152,
+				onStep: function(from, to, percent) {
+					$(this.el).find('.percent').text(Math.round(percent));
+				}
+			});
+		}
   });
   
 });

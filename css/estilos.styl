@@ -1,3 +1,4 @@
+@import 'nib'
 @import "bootstrap.min.css"
 @import "font-awesome.min.css"
 .full-screen {
@@ -150,7 +151,7 @@
                     text-decoration none
 .about
     // padding-top 52px
-    // padding-bottom 30px
+    padding-bottom 30px
     &-contenedor
         // margin-top 30px
         // margin-bottom 30px
@@ -187,8 +188,60 @@
                     font-size 60px
                     span
                         color white
-#section03
-    height 400px
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.percent {
+  display: inline-block;
+  line-height: 152px;
+  z-index: 2;
+  margin-left: 42%;
+  font-size: 35px;
+  // font-family 'Lato', sans-serif
+
+}
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}
+.skills
+    background-color #125599
+    padding-bottom 40px
+    // color white
+    font-family 'Lato', sans-serif
+    &-contenedor
+        &_cabecera
+            text-align center
+            color white
+            padding-bottom 40px
+        &_slides
+            color black
+            // text-align center
+            .owl-item
+                .habilidad
+                    margin 0 13% 20px auto
+                    float none
+                    text-align center
+                    h4
+                        margin-left 16%
+                        font-weight 700
+                        text-align center
+            
+            
+// #section03
+    // height 400px
 // .wrapper
 // 	height 400px
 // 	text-align center
@@ -228,4 +281,25 @@ section
                         // a:hover
                         //     background-color #00478a
                         //     transition .5s
-	
+@media screen and (max-width: 640px)
+    .header
+        &-contenedor
+            &_fila
+                &_columna
+                    &_titulo
+                        font-size 3em
+    .me
+        .container
+            .row
+                margin-top 0
+                .col-md-6
+                    h1
+                        font-size 2.5em
+    .skills
+        padding-top 20px !important
+        padding-bottom 80px
+        &-contenedor
+            &_cabecera
+                padding-bottom 0
+                h2
+                    margin-bottom 0
