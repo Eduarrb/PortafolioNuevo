@@ -1,3 +1,40 @@
+/* TIMELINE */
+// (function() {
+
+//   'use strict';
+
+//   // define variables
+//   var items = document.querySelectorAll(".timeline li");
+
+//   // check if an element is in viewport
+//   // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+//   function isElementInViewport(el) {
+//     var rect = el.getBoundingClientRect();
+//     return (
+//       rect.top >= 0 &&
+//       rect.left >= 0 &&
+//       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+//   }
+
+//   function callbackFunc() {
+//     for (var i = 0; i < items.length; i++) {
+//       if (isElementInViewport(items[i])) {
+//         items[i].classList.add("in-view");
+//       }
+//     }
+//   }
+
+//   // listen for events
+//   window.addEventListener("load", callbackFunc);
+//   window.addEventListener("resize", callbackFunc);
+//   window.addEventListener("scroll", callbackFunc);
+
+// })();
+
+/* HEADER CAOUROSEL */
+
 var $item = $('.carousel .item'); 
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
@@ -67,10 +104,16 @@ $(document).ready(function() {
 		windowH = $(window).height();
 	});
 	var habilidadesTopOffset = 0;
+	var timelineTopOffset = 0;
+	if($('.experiencia-contenedor_fila_timeline').length)
+	{
+		timelineTopOffset = $('.experiencia-contenedor_fila_timeline').offset().top;
+	};
 	if($('#section02').length)
 	{
 		habilidadesTopOffset = $('#section02').offset().top;
 	};
+
    
   $('#main-nav-list').onePageNav({
     scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
@@ -94,6 +137,10 @@ $(document).ready(function() {
       // otherwise remove it
       $('#menu').removeClass('fixed');
     }
+    if(window.pageYOffset > timelineTopOffset-windowH+200)
+		{
+			$('.experiencia-contenedor_fila_timeline li').addClass('fadeInUp');
+		}
     if(window.pageYOffset > habilidadesTopOffset-windowH+200)
 		{
 			$('.chart').easyPieChart({
@@ -368,3 +415,6 @@ $(".header-contenedor_fila_columna_link").click(function(e){
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
+
+
+
