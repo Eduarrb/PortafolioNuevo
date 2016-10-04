@@ -105,13 +105,18 @@ $(document).ready(function() {
 	});
 	var habilidadesTopOffset = 0;
 	var timelineTopOffset = 0;
-	if($('.experiencia-contenedor_fila_timeline').length)
-	{
-		timelineTopOffset = $('.experiencia-contenedor_fila_timeline').offset().top;
-	};
+	var HabilidadesTecnicas = 0;
 	if($('#section02').length)
 	{
 		habilidadesTopOffset = $('#section02').offset().top;
+	};
+	if($('#section03').length)
+	{
+		HabilidadesTecnicas = $('#section02').offset().top;
+	};
+	if($('.experiencia-contenedor_fila_timeline').length)
+	{
+		timelineTopOffset = $('.experiencia-contenedor_fila_timeline').offset().top;
 	};
 
    
@@ -141,7 +146,7 @@ $(document).ready(function() {
 		{
 			$('.experiencia-contenedor_fila_timeline li').addClass('fadeInUp');
 		}
-    if(window.pageYOffset > habilidadesTopOffset-windowH+200)
+    if(window.pageYOffset > HabilidadesTecnicas-windowH+200)
 		{
 			$('.chart').easyPieChart({
 				easing: 'easeInOut',
@@ -416,5 +421,20 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
+function hasHtml5Validation () {
+  return typeof document.createElement('input').checkValidity === 'function';
+}
 
-
+if (hasHtml5Validation()) {
+  $('.formularioContacto').submit(function (e) {
+    if (!this.checkValidity()) {
+      e.preventDefault();
+      $(this).addClass('invalid');
+      $('#status').html('invalid');
+    } else {
+      $(this).addClass('valid');
+      $('#status').html('submitted');
+    }
+  });
+}
+$('#form').bsValidate();

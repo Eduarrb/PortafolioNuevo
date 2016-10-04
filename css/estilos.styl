@@ -278,7 +278,7 @@
                             height 57px
                             background url(../img/timeline-item.png)
                             position absolute
-                            right -28px
+                            right -29.5px
                             top 4px
                         .bubble
                             float right
@@ -343,9 +343,169 @@
                             .time
                                 text-align left
                         .point
-                            left -29px
+                            left -27px
                     .fadeInUp
                         animation-name fadeInUp
+.contacto
+    padding 30px 0 50px 0
+    background-color #f9f9f9
+    &-contenedor
+        &_division
+            width 100px
+            height 1px
+            background #125599
+            margin 0 auto
+        &_encabezado
+            text-align center
+            padding-bottom 40px
+            font-family 'Lato', sans-serif
+            color #125599
+        &_formulario
+            margin 0
+            padding 0
+            border 0
+            outline 0
+            font-weight inherit
+            font-size 100%
+            font-family inherit
+            vertical-align baseline
+            .centro
+                margin 0 auto
+                float none
+                .formularioContacto
+                    .alert-danger
+                        background-color #d9edf7
+                    label
+                        display none
+                    input
+                        max-width 48.5%
+                    .no-margin
+                        margin-right 0
+                    input
+                    textarea
+                        border 1px solid #b6b7b7
+                        color #363b3f
+                        background none
+                        padding 15px 30px
+                        margin 0 3% 20px 0
+                        resize none !important
+                        -webkit-appereance none
+                        display block
+                        
+                    p
+                        text-align center
+                        font-family 'Lato', sans-serif
+                        font-weight 400
+                        font-size 15px
+                        line-height 24px
+                        button
+                            display block
+                            text-decoration none !important
+                            color white !important
+                            text-transform uppercase
+                            background #125599
+                            font-weight bold
+                            padding 10px
+                            border-radius 4px
+                            border 1px solid #125599
+                            width 190px
+                            margin-left auto
+                            margin-right auto
+                            margin-top 30px
+                            transition .5s
+                            &:hover
+                                color #125599 !important
+                                background white
+                                transition .5s ease
+.footer
+    padding 30px 0 50px 0
+    margin 0
+    background #363b3f
+    &-contenedor
+        // margin 0
+        // padding 0
+        // border 0
+        // outline 0
+        // font-weight inherit
+        // font-size 100%
+        // font-family inherit
+        // vertical-align baseline
+        p
+            font-family 'Lato', sans-serif
+            font-weight 400
+            font-size 15px
+            line-height 24px
+            color white
+            text-align center
+        &_lista
+            width 100%
+            text-align center
+            margin 0
+            padding 0
+            margin-top 20px
+            list-style none
+            &_items
+                display inline-block
+                margin 0 4px
+                a
+                    display block
+                    text-decoration none
+                    border-bottom none
+                    padding 18px
+                    transition all 0.3s ease-in, 1s
+                    font-size 3.5rem
+                    color #4265b9
+                    border-radius 3px
+                .facebook-square
+                    // color #4265b9
+                    background url(../img/facebook.png) center no-repeat #444749
+                .facebook-square:hover
+                    background-color #4265b9
+                .twitter-square
+                    // color #4265b9
+                    background url(../img/twitter.png) center no-repeat #444749
+                .twitter-square:hover
+                    background-color #9ae4e8
+                .google-plus-square
+                    background url(../img/google.png) center no-repeat #444749
+                .google-plus-square:hover
+                    background-color #d62408
+                .linkedin-square
+                    background url(../img/linkedin.png) center no-repeat #444749
+                .linkedin-square:hover
+                    background-color #0073b2
+                .youtube-square
+                    background url(../img/youtube.png) center no-repeat #444749
+                .youtube-square:hover
+                    background-color #df3333
+                    
+/* CSS INVALID INPUTS*/
+.invalid input:required:invalid {
+    background: rgba(169, 68, 66, 0.11);
+    // color: white;
+}
+
+.invalid textarea:required:invalid {
+    background: #125599;
+    // color: white;
+}
+.invalid input:required:valid {
+    background: white ;
+}
+.invalid textarea:required:valid {
+    background: white ;
+}
+
+// input {
+//   display: block;
+//   margin-bottom: 10px;
+// }                    
+                    
+                    
+                    
+                    
+                                      
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;

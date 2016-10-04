@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Portafolio Eduardo Arroyo</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Personal Eduardo Arroyo</title>
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
@@ -13,7 +13,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easypiechart.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.js"></script>
-	
+	<script type="text/javascript" src="js/jquery.bsvalidate.js"></script>
 </head>
 <body id="body">
 	<header class="header section" id="header">
@@ -277,6 +277,61 @@
 			</div>
 		</div><!-- experiencia-contenedor -->
 	</section><!-- experiencia -->
+	<section class="contacto" id="section05">
+		<div class="contacto-contenedor container">
+			<div class="contacto-contenedor_division"></div>
+			<div class="contacto-contenedor_encabezado">
+				<h2>DEJA UN MENSAJE</h2>
+			</div>
+			<div class="contacto-contenedor_formulario">
+				<div class="col-xs-12 col-sm-9 col-md-9 centro">
+					<form action="php/contacto.php" role="form" id="form" method="post" name="formularioContacto" class="formularioContacto">
+						<div class="form-group">
+							
+							
+							<label for="name" class="control-label">Nombre</label>
+							<input type="text" id="name" name="name" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" placeholder="Tú nombre..." data-validation="required" required>
+						</div>
+						<div class="form-group">
+							<label for="email" class="control-label">Email</label>
+							<input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 no-margin" placeholder="Tú correo..." data-validation="email" required>
+						</div>
+						<div class="form-group">
+							<textarea name="message" id="message" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Tú mensaje..."></textarea>
+						</div>
+						<p>
+							<button type="submit" value="send" id="submit" class="submit sendcontact">Enviar Mensaje</button>
+						</p>
+					</form>
+					<p class="error"></p>
+				</div>
+			</div>
+		</div><!-- contacto-contenedor -->
+	</section><!-- contacto -->
+	<footer class="footer">
+		<div class="container footer-contenedor">
+			<p>© 2016 eduardoarroyob.com. Derechos Reservados.</p>
+			<ul class="footer-contenedor_lista">
+				<li class="footer-contenedor_lista_items">
+					<a href="https://www.facebook.com/EduArroyoBahamonde" class="footer-contenedor_items_link facebook-square" target="_blank"></a>
+				</li>
+				<li class="footer-contenedor_lista_items">
+					<a href="https://twitter.com/EduArroyoB" class="footer-contenedor_items_link twitter-square" target="_blank"></a>
+				</li>
+				<li class="footer-contenedor_lista_items">
+					<a href="https://plus.google.com/u/0/+EduardoArroyo/posts" class="footer-contenedor_items_link google-plus-square" target="_blank"></a>
+				</li>
+				<li class="footer-contenedor_lista_items">
+					<a href="http://www.linkedin.com/in/
+eduardo-arroyo-77387211a
+" class="footer-contenedor_items_link linkedin-square" target="_blank"></a>
+				</li>
+				<li class="footer-contenedor_lista_items">
+					<a href="https://www.youtube.com/channel/UCXW3XzSy3Mc0zGfrMWf0GJQ" class="footer-contenedor_items_link youtube-square" target="_blank"></a>
+				</li>
+			</ul>
+		</div>
+	</footer>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
